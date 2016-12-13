@@ -18,9 +18,11 @@ public class LoaderManager {
 
     private LoaderManager() {
         UrlLoader urlLoader = new UrlLoader();
+        SquarePhotoLocalLoader squarePhotoLocalLoader = new SquarePhotoLocalLoader();
         registerLoader(Constants.SCHEMA_FILE, new LocalLoader());
         registerLoader(Constants.SCHEMA_HTTP, urlLoader);
         registerLoader(Constants.SCHEMA_HTTPS, urlLoader);
+        registerLoader(Constants.SCHEMA_SQUARE_LOCAL, squarePhotoLocalLoader);
     }
 
     public static LoaderManager getInstance() {

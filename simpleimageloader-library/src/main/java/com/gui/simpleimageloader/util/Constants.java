@@ -15,4 +15,5 @@ public class Constants {
     public static final String SCHEMA_HEADPORTRAIT = "HeadPortrait";
     public static final String SCHEMA_HD = "HD";
     public static final String SCHEMA_SQUARE = "Square";
+    public static final String SCHEMA_SQUARE_LOCAL = "Square_local";
 }
