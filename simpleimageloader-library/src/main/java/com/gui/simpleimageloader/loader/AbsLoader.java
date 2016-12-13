@@ -18,7 +18,7 @@ abstract class AbsLoader implements Loader {
     @Override
     public Bitmap loadImage(String uri, ImageView imageView, int maxWidth, int maxHeight) {
         if (imageCache == null)
-            imageCache = new MemoryCache(15);
+            imageCache = new MemoryCache(8);
         Bitmap bitmap = imageCache.get(uri, maxWidth, maxHeight);
         if (bitmap != null) {
             if (!bitmap.isRecycled()) {
